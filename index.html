@@ -1,34 +1,46 @@
+<html>
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <noscript>
+        <meta http-equiv="refresh" content="0;url=rickroll.mp4" />
+    </noscript>
 </head>
 
 <body>
-    <video autoplay loop width="100%">
+    <script>
+        function load() {
+            document.title = "Loading...";
+            window.location.href = "rickroll.mp4";
+        }
 
-        <source src="./rickroll.mp4" type="video/mp4">
+        window.onload = load;
+    </script>
 
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: black;
+        }
+
+        video {
+            max-width: 100vw;
+            max-height: 100vh;
+            width: auto;
+            height: auto;
+        }
+    </style>
+
+    <video autoplay muted loop>
+        <source src="rickroll.mp4" type="video/mp4">
         Sorry, your browser doesn't support embedded videos.
     </video>
-    <script>
-        // Change the variables below to your liking
-        const currentURL = "./rickroll.mp4";
-        const pageTitle = "Loading...";
-        // End of changable variables
-
-        function setTitle() {
-            document.title = pageTitle;
-        }
-
-        function redirect() {
-            window.location.href = currentURL;
-        }
-
-        function onload() {
-            setTitle();
-            redirect();
-        }
-
-        window.onload = onload();
-    </script>
 </body>
 
 </html>
