@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <noscript>
-        <meta http-equiv="refresh" content="0;url=rickroll.mp4" />
+        <meta http-equiv="refresh" content="0;url=video.mp4" />
     </noscript>
 </head>
 
@@ -13,10 +13,10 @@
     <script>
         function load() {
             document.title = "Loading...";
-            window.location.href = "rickroll.mp4";
+            window.location.href = "video.mp4";
         }
 
-        window.onload = load;
+        window.addEventListener("DOMContentLoaded", load);
     </script>
 
     <style>
@@ -38,7 +38,7 @@
     </style>
 
     <video autoplay muted loop>
-        <source src="rickroll.mp4" type="video/mp4">
+        <source src="video.mp4" type="video/mp4">
         Sorry, your browser doesn't support embedded videos.
     </video>
 </body>
